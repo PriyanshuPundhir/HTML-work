@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Form</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<style>
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+padding: 0;
+font-family: "Bahnschrift", "sans-serif";
+background-image: url("bc.jpg");
+background-repeat: no-repeat;
+}
+.container {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 500px;
+text-align: center;
+border-radius: 20px;
+box-shadow: 0px 0px 40px 0px rgba(52, 73, 94, 0.5);
+}
+.form-container {
+margin: 30px 40px 20px;
+}
+.heading {
+font-size: 3rem;
+font-weight: bold;
+color: #34495e;
+text-transform: uppercase;
+margin-bottom: 50px;
+}
+form .form-control {
+margin-bottom: 30px;
+}
+.form-control > div { /* Error Message */
+text-align: left;
+visibility: hidden;
+font-size: 1rem;
+color: rgba(231, 76, 60, 1);
+}
+input {
+border: none;
+border-radius: 10px;
+box-shadow: 0px 0px 20px 0px rgba(52, 73, 94, 0.3);
+width: 100%;
+height: 40px;
+padding: 5px 15px;
+font-size: 1rem;
+color: #34495e;
+outline: none;
+margin-bottom: 2px;
+}
+input:focus {
+transition: 1s ease;
+box-shadow: 0px 0px 20px 0px rgba(52, 73, 94, 0.6);
+}
+form .cpass {
+margin-bottom: 0px;
+}
+.error {
+border: 2px solid rgba(231, 76, 60,0.6);
+}
+.btn {
+/*text-align: center;*/
+}
+button {
+font-size: 1.2rem;
+background-color: #1abc9c;
+color: #ecf0f1;
+border: none;
+border-radius: 10px;
+box-shadow: 0px 0px 10px 0px rgba(52, 73, 94, 0.7);
+padding: 10px 20px;
+margin: 30px auto 30px;
+cursor: pointer;
+}
+button:hover {
+transition: 0.4s ease;
+box-shadow: 0px 0px 20px 1px rgba(52, 73, 94, 0.7);
+}
+</style>
+<div class="container">
+<div class="form-container">
+<div class="heading">Register</div>
+<form>
+<div class="form-control">
+<input type="text" id="fname" placeholder="First Name">
+<div>Error Message</div>
+</div>
+<div class="form-control">
+<input type="text" id="lname" placeholder="Last Name">
+<div>Error Message</div>
+</div>
+<div class="form-control">
+<input type="text" id="mail" placeholder="Email Id">
+<div>Error Message</div>
+</div>
+<div class="form-control">
+<input type="tel" id="phone" placeholder="Phone
+Number">
+<div>Error Message</div>
+</div>
+<div class="form-control">
+<input type="text" id="dob" placeholder="Date of Birth"
+onfocus="(this.type='date')" onblur="(this.type='text')">
+<div>Error Message</div>
+</div>
+<div class="form-control">
+<input type="password" id="pass"
+placeholder="Password">
+<div>Error Message</div>
+</div>
+<div class="form-control cpass">
+<input type="password" id="confirm-pass"
+placeholder="Re-enter Password">
+<div>Error Message</div>
+</div>
+<div class="btn"><button type="submit">Register</button></div>
+</form>
+</div>
+</div>
+</body>
+</html>

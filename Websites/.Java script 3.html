@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>News</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<style>
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+padding: 0;
+font-family: "Bahnschrift", "sans-serif";
+color: rgba(44, 62, 80,1.0);
+}
+.flex-container {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+.header {
+width: 100%;
+text-align: center;
+background-color: purple;
+color: rgba(236, 240, 241,1.0);
+box-shadow: 0px 0px 20px 5px rgba(127, 140, 141,1.0);
+margin: 0px auto 50px;
+align-self: flex-start;
+}
+.header > h1 {
+margin: 0;
+font-family: "Felix Titling", "sans-serif";
+font-size: 5rem;
+}
+marquee {
+color: rgba(236, 240, 241,1.0);
+font-size: 2rem;
+padding: 15px 5px 15px;
+margin: 0px auto 40px;
+}
+.grid-container {
+margin: 0px 30px 50px;
+display: grid;
+grid-template-rows: repeat(auto-fit, minmax(345px, 1fr)); /*750px*/
+grid-template-columns: repeat(auto-fit, minmax(404px, 1fr)); /*450px*/
+/*grid-auto-flow: row;*/
+justify-items: center;
+grid-gap: 60px 30px;
+grid-template-areas:
+"side-left main-1 main-3 side-right"
+ "side-left main-2 main-4 side-right";
+}
+.grid-container div {
+box-shadow: 0px 0px 10px 0px rgba(189, 195, 199, 1);
+text-align: center;
+padding: 15px 20px;
+}
+.grid-container div a {
+text-decoration: none;
+color: rgba(44, 62, 80,1.0);
+}
+.grid-container div h1 {
+margin: 0 auto 20px;
+}
+.grid-container div p {
+font-size: 1.5rem;
+align-content: end;
+color: rgba(127, 140, 141,1.0);
+}
+.box-1 {
+grid-area: side-left;
+}
+.box-2 {
+grid-area: main-1;
+}
+.box-3 {
+grid-area: main-2;
+}
+.box-4 {
+grid-area: main-3;
+}
+.box-5 {
+grid-area: main-4
+}
+.box-6 {
+grid-area: side-right;
+}
+.footer {
+align-self: flex-end;
+width: 100vw;
+text-align: center;
+box-shadow: 0px 0px 20px 5px rgba(127, 140, 141,1.0);
+background-color: purple;
+color: rgba(236, 240, 241,1.0);
+padding: 20px;
+font-family: "Felix Titling", "sans-serif";
+font-size: 1.5rem;
+line-height: 2.5rem;
+}
+@media (min-width: 360px) and (max-width: 768px) {
+.header {
+margin-bottom: 30px;
+}
+.header h1 {
+font-size: 3rem;
+}
+.marquee {
+height: 30px;
+font-size: 1rem;
+padding: 5px 2px 5px;
+margin-bottom: 30px;
+}
+.grid-container {
+grid-template-rows: 1fr 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
+grid-template-columns: 1fr;
+grid-row-gap: 30px;
+margin-bottom: 30px;
+grid-template-areas:
+"side-left"
+"side-right"
+"main-1"
+"main-2"
+"main-3"
+"main-4";
+}
+.grid-container h1 {
+font-size: 1.2rem;
+}
+.grid-container div p {
+font-size: 1rem;
+}
+.footer {
+font-size: 0.8rem;
+line-height: 2rem;
+padding: 10px;
+}
+}
+</style>
+<div class="flex-container">
+<div class="header">
+<h1>NEWS</h1>
+</div>
+<marquee behavior="scroll" direction="left" bgcolor="#e74c3c"
+height="65px">BREAKING NEWS -Covid-19 vaccine: Serum Institute of India to start human trials from next month </marquee>
+<div class="grid-container">
+<div class="box-1">
+<a
+href="https://timesofindia.indiatimes.com/entertainment/hindi/bollywood/news/aishwary
+a-rai-bachchan-and-aaradhya-also-test-positive-for-covid-19-after-amitabh-abhishekhospitalised/articleshow/76921001.cms" target="_blank">
+<h1>Emirates to operate repatriation flights from 4 more Indian cities to Dubai</h1>
+</a>
+<p>The airline will now be operating repatriation flights to Dubai from a total of nine Indian cities till 26 July
+New Delhi: The Emirates airlines on Sunday said it will operate repatriation flights from four additional Indian cities
+ of Ahmedabad, Chennai, Hyderabad and Kolkata to Dubai till July 26.
+ The Dubai-based airline had on July 11 announced that it would be operating special repatriation flights from Bengaluru, Kochi,
+ Delhi, Mumbai and Thiruvananthapuram to Dubai in the United Arab Emirates (UAE) between July 12 and July 26.
+</p>
+</div>
+<div class="box-2">
+<a href="https://timesofindia.indiatimes.com/india/indias-covid-19-
+recovery-rate-improves-to-62-93-per-cent-health-ministry/articleshow/76923184.cms"
+target="_blank">
+<h1>India Inc wakes up to march of the machines</h1>
+</a>
+<p>From shop floors to software solutions, there’s talk of automation in the air. How does it affect your job?
+The people displaced by automation could find it harder to make the new occupational transitions.
+</p>
+</div>
+<div class="box-3">
+<a href="https://www.gadgetsnow.com/tech-news/elon-musk-is-thebest-paid-ceo-apple-ceo-tim-cook-at-2nd-spot/articleshow/76918714.cms"
+target="_blank">
+<h1>Covid-19: Maharashtra reports 9,518 new cases, biggest single-day jump so far</h1>
+</a>
+<p>Active cases in the state are at 1,28,730 and total patients discharged so far are 1,69,569
+State's death tally due to covid-19 is at 11,854
+</p>
+</div>
+<div class="box-4">
+<a href="https://timesofindia.indiatimes.com/auto/news/govtevaluating-feasibility-of-hydrogen-propelled-vehicles/articleshow/76920155.cms"
+target="_blank">
+<h1>The great Indian growth miracle</h1>
+</a>
+<p>Three decades of rapid economic growth have changed the country, but India’s economic transformation still remains a work in progress
+
+
+</p>
+</div>
+<div class="box-5">
+<a href="https://www.gadgetsnow.com/tech-news/apple-to-macbookmacbook-air-and-macbook-pro-users-doing-this-may-crack-yourdisplay/articleshow/76917957.cms" target="_blank">
+<h1>Apple to MacBook, MacBook Air and MacBook Pro users:
+Doing this may crack your display</h1>
+</a>
+<p>pple has shared an important tip for the users of its laptops --
+MacBook, ...</p>
+</div>
+<div class="box-6">
+<a href="https://timesofindia.indiatimes.com/india/up-govt-formspanel-to-probe-kanpur-ambush-vikas-dubeys-encounter/articleshow/76921824.cms"
+target="_blank">
+<h1>PM Likely To Visit Ayodhya On August 5 For Ram Temple Event: Trust Member</h1>
+</a>
+<p>Ayodhya: Prime Minister Narendra Modi is likely to visit Ayodhya on August 5 for the "bhoomi pujan" ceremony to begin the construction of a
+ grand Ram Temple, and the Shri Ram Janmabhoomi Teertha Kshetra has begun preparations for it, its members said today.
+According to Trust president Nritya Gopal Das, the "bhoomi pujan" will be performed with the placing of a 40-kg silver brick at the sanctum sanctorum.
+Three-day-long Vedic rituals, beginning August 3, will precede the main ceremony.
+Uttar Pradesh Chief Minister Yogi Aadityanath will also join the "bhoomi pujan" ceremony.
+</p>
+</div>
+</div>
+<div class="footer">
+<div id="name">Created By :Priyanshu pundhir</div>
+<div id="roll">Roll No : R142219022</div>
+<div id="branch">Branch : G&G</div>
+</div>
+</div>
+</body>
+</html>

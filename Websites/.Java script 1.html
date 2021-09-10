@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mouse & Keyboard Events</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<style>
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+padding: 0;
+font-family: "Bahnschritf", "sans-serif";
+}
+h1 {
+margin: 0;
+}
+.container {
+text-align: center;
+max-width: 1000px;
+margin: 50px auto;
+border: 10px solid #34495e;
+}
+.mouse {
+margin: 30px auto 50px;
+}
+.mouse h1 {
+margin-bottom: 20px;
+}
+.click-box {
+width: 200px;
+height: 200px;
+background-color: #3498db;
+margin: auto;
+cursor: pointer;
+transition: 1s ease-in;
+}
+.mouseover {
+width: 250px;
+height: 250px;
+transition: 1s ease-in;
+margin: auto;
+}
+input {
+width: 500px;
+height: 30px;
+margin-bottom: 20px;
+}
+.keyboard {
+margin-top: 50px;
+}
+.keyboard h1 {
+margin-bottom: 20px;
+}
+.keydown, .keyup {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}</style>
+<div class="container">
+<!-- Mouse Events -->
+<div class="mouse">
+<h1>Click on the box to change its color!</h1>
+<div tabindex="0" class="click-box"></div>
+</div>
+<!-- Keyboard Events -->
+<div class="keyboard">
+<h1>Enter anything in the input field!</h1>
+<form>
+<input type="text" placeholder="Enter something">
+</form>
+<div class="keydown"></div>
+<div class="keyup"></div>
+</div>
+</div>
+</body>
+</html>

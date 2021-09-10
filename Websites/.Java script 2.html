@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mouse & Keyboard Events</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<style>
+* {
+box-sizing: border-box;
+}
+body {
+margin: 0;
+padding: 0;
+font-family: "Bahnschritf", "sans-serif";
+}
+h1 {
+margin: 0;
+}
+.container {
+text-align: center;
+max-width: 1000px;
+margin: 50px auto;
+border: 10px solid #34495e;
+}
+.mouse {
+margin: 30px auto 50px;
+}
+.mouse h1 {
+margin-bottom: 20px;
+}
+.click-box {
+width: 200px;
+height: 200px;
+background-color: #3498db;
+margin: auto;
+cursor: pointer;
+transition: 1s ease-in;
+}
+.mouseover {
+width: 250px;
+height: 250px;
+transition: 1s ease-in;
+margin: auto;
+}
+input {
+width: 500px;
+height: 30px;
+margin-bottom: 20px;
+}
+.keyboard {
+margin-top: 50px;
+}
+.keyboard h1 {
+margin-bottom: 20px;
+}
+.keydown, .keyup {
+font-size: 1.2rem;
+margin-bottom: 10px;
+}</style>
+
+<div class="container">
+<!-- Mouse Events -->
+<div class="mouse">
+<h1>Click on the box to change its color!</h1>
+<div tabindex="0" class="click-box"></div>
+</div>
+<!-- Keyboard Events -->
+<div class="keyboard">
+<h1>Enter anything in the input field!</h1>
+<form>
+<input type="text" placeholder="Enter something">
+</form>
+<div class="keydown"></div>
+<div class="keyup"></div>
+</div>
+</div>
+<script>const clickBox = document.querySelector(".click-box");
+const form = document.querySelector("form");
+const keyDown = document.querySelector(".keydown");
+const keyUp = document.querySelector(".keyup");
+const colors = ["#e74c3c", "#2ecc71", "#f1c40f"];
+// MOUSE EVENTS
+// Mouse Event - CLICK
+clickBox.addEventListener("click", () => {
+// Generating random number between 0 and 2
+const i = Math.floor(Math.random()*3);
+// Changing the color of box according to the number stored in i variable
+clickBox.style.backgroundColor = colors[i];
+});
+// Mouse Event - BLUR
+clickBox.addEventListener("blur", () => {
+// Changing the color of the box as soon as it looses focus
+clickBox.style.backgroundColor = "#34495e";
+console.log("BOX lost focus");
+});
+// Mouse Event - MOUSEOVER
+clickBox.addEventListener("mouseover", () => {
+clickBox.classList.add("mouseover");
+});
+// Mouse Event - MOUSEOUT
+clickBox.addEventListener("mouseout", () => {
+clickBox.classList.remove("mouseover");
+});
+// KEYBOARD EVENTS
+// Keyboard Event - KEYDOWN
+form.addEventListener("keydown", e => {
+const key = e.key;
+keyDown.innerHTML = `"${key}" is pressed`;
+});
+// Keyboard Event - KEYUP
+form.addEventListener("keyup", e => {
+const key = e.key;
+keyUp.innerHTML = `"${key}" is released`;
+});
+</script>
+</body>
+</html>
